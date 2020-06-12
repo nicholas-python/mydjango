@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+    Delete Posts
+{% endblock title %}
+
+{% block content %}
+    <h1>Delete Post</h1>
+    <form action="" method="POST">
+        <p>Are you sure you want to delete this item <strong>{{ object }}</strong>?</p>
+        {% csrf_token %}
+        <p><input type="submit", value="Confirm"></p>
+    </form>
+{% endblock content %}

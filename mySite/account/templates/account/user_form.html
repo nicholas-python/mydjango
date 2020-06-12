@@ -1,0 +1,22 @@
+{% extends 'account/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Sign Up
+{% endblock title %}
+
+{% block content %}
+    <h1>Sign Up</h1>
+    <form action="" method="POST">
+        {% for field in form %}
+            <div class="row">
+                <div class="col">
+                    {{ field|as_crispy_field }}
+                </div>
+            </div>
+        {% endfor %}
+        {% csrf_token %}
+        <br>
+        <p><input type="submit" value="Register" class="bt btn-primary"></p>
+    </form>
+{% endblock content %}
